@@ -1,0 +1,51 @@
+<script type="text/javascript">
+    RED.nodes.registerType('vl6180',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            address: {value:"41", required:true, validate:RED.validators.number()},
+            offset: {value:"0", required:true, validate:RED.validators.number()},
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "feed.png",
+        label: function() {
+            return this.name||"vl6180";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="vl6180">
+    <div class="form-row">
+        <label for="node-input-address"><i class="fa fa-address-card-o"></i> Bus Address</label>
+        <input type="number" id="node-input-address" class="vl6180-address" placeholder="Address" min=3 max=127>
+    </div>
+    <div class="form-row">
+        <label for="node-input-offset"><i class="fa fa-address-card-o"></i> Offset</label>
+        <input type="number" id="node-input-offset" class="vl6180-offset" placeholder="Offset">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="vl6180">
+    <p>A Node-Red node for reading distance from TOF VL6180 sensor</p>
+	<h3>Output</h3>
+	<dl class="message-properties">
+		<dt>msg.payload <span class="property-type">number</span></dt>
+	</dl>
+	a number representing the range in mm.
+	<cite>Value `255` is out of range</cite>
+	<h3>Details</h3>
+	<p>Config:</p>
+	<ol>
+		<li><b>Bus Address</b>: This is the address of the VL6180.  The VL6180 has an address of <b>41 (0x29)</b> by default.</li>
+		<li><b>Offset</b>: This is the offset from the distance to the target in mm.  The default is <b>0</b>.</li>
+		<li><b>Name</b>: (optional) This is the name of the node.</li>
+	</ol>
+	<p>Requires the Python3 and  Adafruit VL6180X Python library in order to work.</p>
+
+</script>

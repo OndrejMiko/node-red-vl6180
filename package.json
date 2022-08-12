@@ -1,0 +1,25 @@
+{
+  "name": "node-red-vl6180",
+  "version": "0.0.1",
+  "description": "A Node-Red node for reading distance from TOF VL6180 sensor",
+  "main": "vl6180.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OndrejMiko/node-red-vl6180.git"
+  },
+  "keywords": [
+    "node-red",
+    "laser distance",
+    "VL6180X",
+    "Time-of-Flight",
+    "tof",
+    "TOF050C"
+  ],
+  "node-red" : {
+     "nodes": {
+        "input": "vl6180.js"
+     }
+  },
+  "author": "Ondrej Miko",
+  "license": "Apache-2.0"
+}
