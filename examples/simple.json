@@ -1,0 +1,71 @@
+[
+  {
+    "id": "fb5e2a638ddc9f0c",
+    "type": "tab",
+    "label": "Simple VL6180",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "2ca32b87604aa134",
+    "type": "inject",
+    "z": "fb5e2a638ddc9f0c",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 260,
+    "y": 160,
+    "wires": [
+      [
+        "48292ddb89d6bf43"
+      ]
+    ]
+  },
+  {
+    "id": "48292ddb89d6bf43",
+    "type": "vl6180",
+    "z": "fb5e2a638ddc9f0c",
+    "address": "41",
+    "offset": "0",
+    "name": "",
+    "x": 450,
+    "y": 160,
+    "wires": [
+      [
+        "19481d7a448f5952"
+      ]
+    ]
+  },
+  {
+    "id": "19481d7a448f5952",
+    "type": "debug",
+    "z": "fb5e2a638ddc9f0c",
+    "name": "Debub",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 610,
+    "y": 160,
+    "wires": []
+  }
+]
