@@ -1,6 +1,6 @@
 {
-  "name": "@ondrejmiko/node-red-cobtrib-vl6180",
-  "version": "1.0.2",
+  "name": "@ondrejmiko/node-red-contrib-vl6180",
+  "version": "1.0.3",
   "description": "A Node-Red node for reading distance from TOF VL6180 sensor",
   "main": "vl6180.js",
   "repository": {
@@ -29,7 +29,8 @@
      }
   },
   "publishConfig": {
-    "@ondrejmiko:registry":"https://npm.pkg.github.com/"
+    "@ondrejmiko:registry":"https://npm.pkg.github.com/",
+    "access": "public"
   },
   "author": "Ondrej Miko",
   "license": "Apache-2.0"

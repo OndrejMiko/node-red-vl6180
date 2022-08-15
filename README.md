@@ -32,7 +32,7 @@ sudo pip3 install adafruit-circuitpython-vl6180x
 
 ## Installation
 ```bash
-npm install node-red-vl6180
+npm install @ondrejmiko/node-red-contrib-vl6180
 ```
 
 
