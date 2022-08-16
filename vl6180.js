@@ -3,7 +3,7 @@
     @file       vl6180.js
     @brief      Node-RED support for the VL6180.
     @author     Ondrej Miko
-    @version    0.0.1
+    @version    1.0.4
 
     @copyright 2022 Ondrej Miko
     @attention
@@ -33,7 +33,7 @@ module.exports = function(RED) {
 				// Parse data
 				data = data.toString().trim();
 				data=data.replaceAll("'","\"");
-				msg.payload=JSON.parse(data);
+				msg.payload=parseInt(data);
 				// Send data to node
 				node.send(msg);
 			});
